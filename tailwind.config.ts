@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom coder theme colors
+				blood: {
+					50: '#fef2f2',
+					100: '#fee2e2',
+					200: '#fecaca',
+					300: '#fca5a5',
+					400: '#f87171',
+					500: '#ef4444',
+					600: '#dc2626',
+					700: '#b91c1c',
+					800: '#991b1b',
+					900: '#7f1d1d',
+					950: '#450a0a'
+				},
+				cyber: {
+					black: '#0a0a0a',
+					dark: '#111111',
+					red: '#ff0000',
+					crimson: '#dc143c'
 				}
 			},
 			borderRadius: {
@@ -84,11 +105,55 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'matrix-rain': {
+					'0%': { transform: 'translateY(-100%)' },
+					'100%': { transform: 'translateY(100vh)' }
+				},
+				'typewriter': {
+					'from': { width: '0' },
+					'to': { width: '100%' }
+				},
+				'blink': {
+					'0%, 50%': { opacity: '1' },
+					'51%, 100%': { opacity: '0' }
+				},
+				'glitch': {
+					'0%': { transform: 'translate(0)' },
+					'20%': { transform: 'translate(-2px, 2px)' },
+					'40%': { transform: 'translate(-2px, -2px)' },
+					'60%': { transform: 'translate(2px, 2px)' },
+					'80%': { transform: 'translate(2px, -2px)' },
+					'100%': { transform: 'translate(0)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'rotate-3d': {
+					'from': { transform: 'rotateX(0deg) rotateY(0deg)' },
+					'to': { transform: 'rotateX(360deg) rotateY(360deg)' }
+				},
+				'pulse-red': {
+					'0%, 100%': { boxShadow: '0 0 0 0 rgba(239, 68, 68, 0.7)' },
+					'70%': { boxShadow: '0 0 0 10px rgba(239, 68, 68, 0)' }
+				},
+				'slide-up': {
+					'from': { transform: 'translateY(100%)', opacity: '0' },
+					'to': { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'matrix-rain': 'matrix-rain 3s linear infinite',
+				'typewriter': 'typewriter 3s steps(30, end)',
+				'blink': 'blink 1s infinite',
+				'glitch': 'glitch 0.3s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'rotate-3d': 'rotate-3d 10s linear infinite',
+				'pulse-red': 'pulse-red 2s infinite',
+				'slide-up': 'slide-up 0.6s ease-out'
 			}
 		}
 	},
