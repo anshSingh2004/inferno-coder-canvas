@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Mail, Github, Phone, Send } from 'lucide-react';
+import { Mail, Github, Phone, Send, Linkedin } from 'lucide-react';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,27 +49,48 @@ export const Contact = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-4 p-4 bg-cyber-black rounded-lg hover:bg-blood-600/10 transition-all duration-300 group">
+                  <a 
+                    href="mailto:s.priyanshu.coder@gmail.com"
+                    className="flex items-center space-x-4 p-4 bg-cyber-black rounded-lg hover:bg-blood-600/10 transition-all duration-300 group"
+                  >
                     <Mail className="w-6 h-6 text-blood-400 group-hover:animate-pulse" />
                     <div>
                       <div className="text-sm text-gray-400 font-mono">Email Protocol</div>
-                      <div className="text-white">inferno.coder@domain.com</div>
+                      <div className="text-white">s.priyanshu.coder@gmail.com</div>
                     </div>
-                  </div>
+                  </a>
 
-                  <div className="flex items-center space-x-4 p-4 bg-cyber-black rounded-lg hover:bg-blood-600/10 transition-all duration-300 group">
+                  <a 
+                    href="https://github.com/priyanshu-coder" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-4 p-4 bg-cyber-black rounded-lg hover:bg-blood-600/10 transition-all duration-300 group"
+                  >
                     <Github className="w-6 h-6 text-blood-400 group-hover:animate-pulse" />
                     <div>
                       <div className="text-sm text-gray-400 font-mono">GitHub Repository</div>
-                      <div className="text-white">github.com/inferno-coder</div>
+                      <div className="text-white">github.com/priyanshu-coder</div>
                     </div>
-                  </div>
+                  </a>
+
+                  <a 
+                    href="https://linkedin.com/in/priyanshu-singh" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-4 p-4 bg-cyber-black rounded-lg hover:bg-blood-600/10 transition-all duration-300 group"
+                  >
+                    <Linkedin className="w-6 h-6 text-blood-400 group-hover:animate-pulse" />
+                    <div>
+                      <div className="text-sm text-gray-400 font-mono">LinkedIn Profile</div>
+                      <div className="text-white">linkedin.com/in/priyanshu-singh</div>
+                    </div>
+                  </a>
 
                   <div className="flex items-center space-x-4 p-4 bg-cyber-black rounded-lg hover:bg-blood-600/10 transition-all duration-300 group">
                     <Phone className="w-6 h-6 text-blood-400 group-hover:animate-pulse" />
                     <div>
                       <div className="text-sm text-gray-400 font-mono">Secure Line</div>
-                      <div className="text-white">+1 (555) 123-4567</div>
+                      <div className="text-white">+91-969-327-1783</div>
                     </div>
                   </div>
                 </div>
@@ -138,7 +159,7 @@ export const Contact = () => {
 
         <div className="text-center mt-16 p-6 bg-cyber-dark/50 rounded-lg">
           <p className="text-gray-400 font-mono text-sm">
-            © 2024 INFERNO_CODER. Crafted with 
+            © 2024 PRIYANSHU_SINGH. Crafted with 
             <span className="text-blood-500 animate-pulse"> ❤️ </span>
             and lots of caffeine.
           </p>

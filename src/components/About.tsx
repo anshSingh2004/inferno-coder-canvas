@@ -6,15 +6,15 @@ export const About = () => {
   const [activeTab, setActiveTab] = useState('story');
 
   const stats = [
-    { label: 'Years of Experience', value: '5+', icon: Zap },
-    { label: 'Projects Completed', value: '100+', icon: Code },
-    { label: 'Security Audits', value: '50+', icon: Shield },
-    { label: 'Teams Led', value: '10+', icon: Users },
+    { label: 'Years of Experience', value: '2+', icon: Zap },
+    { label: 'Projects Completed', value: '15+', icon: Code },
+    { label: 'Hackathons Won', value: '4', icon: Shield },
+    { label: 'Tech Stacks', value: '10+', icon: Users },
   ];
 
   const tabs = [
     { id: 'story', label: 'My Story' },
-    { id: 'philosophy', label: 'Code Philosophy' },
+    { id: 'skills', label: 'Tech Arsenal' },
     { id: 'achievements', label: 'Achievements' },
   ];
 
@@ -24,43 +24,75 @@ export const About = () => {
         return (
           <div className="space-y-4">
             <p className="text-gray-300 leading-relaxed">
-              Started my journey in the digital underworld at age 16, breaking systems to understand them better. 
-              What began as curiosity evolved into a passion for creating bulletproof applications.
+              Started my journey in the digital realm as a curious student at RNS Institute of Technology. 
+              What began as fascination with code evolved into mastering full-stack development.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              From reverse engineering complex algorithms to architecting enterprise-level solutions, 
-              I've never stopped pushing the boundaries of what's possible with code.
+              From building scalable web applications to optimizing database performance, 
+              I've been pushing the boundaries of what's possible with modern technology.
             </p>
           </div>
         );
-      case 'philosophy':
+      case 'skills':
         return (
           <div className="space-y-4">
-            <p className="text-gray-300 leading-relaxed">
-              "Code is poetry written in logic." Every line must serve a purpose, every function optimized for performance,
-              every system designed for scalability.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              I believe in clean architecture, defensive programming, and the power of automation. 
-              Security isn't an afterthought—it's the foundation.
-            </p>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <h4 className="text-blood-400 font-mono text-sm mb-2">Languages:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {['C++', 'Python', 'Java', 'JavaScript', 'TypeScript', 'Golang'].map((skill) => (
+                    <span key={skill} className="px-2 py-1 bg-blood-600/20 border border-blood-600 rounded text-xs">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-blood-400 font-mono text-sm mb-2">Frameworks:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {['React', 'Node.js', 'Express', 'Next.js'].map((skill) => (
+                    <span key={skill} className="px-2 py-1 bg-blood-600/20 border border-blood-600 rounded text-xs">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-blood-400 font-mono text-sm mb-2">Databases & Tools:</h4>
+              <div className="flex flex-wrap gap-2">
+                {['MongoDB', 'PostgreSQL', 'Redis', 'Git', 'Docker', 'AWS'].map((skill) => (
+                  <span key={skill} className="px-2 py-1 bg-blood-600/20 border border-blood-600 rounded text-xs">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         );
       case 'achievements':
         return (
           <div className="space-y-4">
-            <ul className="space-y-2 text-gray-300">
-              <li className="flex items-center space-x-2">
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-blood-500 rounded-full"></span>
-                <span>Led migration of legacy system serving 1M+ users</span>
+                <span>🥇 1st Place - TechFest National Hackathon at RNS Institute (Nov 2023)</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-blood-500 rounded-full"></span>
-                <span>Optimized database queries reducing load time by 75%</span>
+                <span>🥉 3rd Place - Ambition Hackathon at BIT Bangalore (Jun 2024)</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-blood-500 rounded-full"></span>
-                <span>Built real-time trading platform handling $10M+ daily volume</span>
+                <span>🥉 3rd Place - CypherQuest Hackathon at Dayananda Sagar (Jun 2024)</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="w-2 h-2 bg-blood-500 rounded-full"></span>
+                <span>🥉 3rd Place - Almatron Hackathon at Global Academy (Jun 2024)</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="w-2 h-2 bg-blood-500 rounded-full"></span>
+                <span>🏆 GSoC Contributor - Full Stack Development (May-Aug 2024)</span>
               </li>
             </ul>
           </div>

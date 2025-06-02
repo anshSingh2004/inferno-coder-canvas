@@ -41,6 +41,24 @@ export const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="space-y-8">
+          {/* Profile Picture with Cyberpunk Effects */}
+          <div className="flex justify-center mb-8">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blood-600 via-blood-500 to-blood-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-red"></div>
+              <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-blood-600 neon-border">
+                <img 
+                  src="/lovable-uploads/2c752925-8f0c-40fd-b2d1-f668187b6012.png" 
+                  alt="Priyanshu Singh"
+                  className="w-full h-full object-cover filter contrast-125 brightness-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blood-900/20 to-transparent"></div>
+              </div>
+              {/* Floating particles around profile */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-blood-500 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blood-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+            </div>
+          </div>
+
           <div className="space-y-4">
             <div className="inline-block">
               <div className="terminal-window max-w-2xl mx-auto">
@@ -48,14 +66,14 @@ export const Hero = () => {
                   <div className="terminal-dot bg-red-500"></div>
                   <div className="terminal-dot bg-yellow-500"></div>
                   <div className="terminal-dot bg-green-500"></div>
-                  <span className="text-xs text-gray-400 ml-4">inferno@coder:~$</span>
+                  <span className="text-xs text-gray-400 ml-4">priyanshu@coder:~$</span>
                 </div>
                 <div className="p-6 text-left">
                   <div className="text-blood-400 font-mono text-sm mb-2">
                     $ whoami
                   </div>
                   <div className="text-white text-4xl md:text-6xl font-bold mb-4">
-                    INFERNO CODER
+                    PRIYANSHU SINGH
                   </div>
                   <div className="text-blood-400 font-mono text-sm mb-2">
                     $ cat role.txt
@@ -63,6 +81,15 @@ export const Hero = () => {
                   <div className="text-2xl md:text-3xl text-blood-300 h-12">
                     {displayText}
                     <span className="animate-blink">|</span>
+                  </div>
+                  <div className="text-blood-400 font-mono text-sm mt-4 mb-2">
+                    $ cat education.txt
+                  </div>
+                  <div className="text-lg text-gray-300">
+                    RNS Institute of Technology | CGPA: 8.3
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    Bachelor of Engineering - Information Science
                   </div>
                 </div>
               </div>
@@ -81,12 +108,20 @@ export const Hero = () => {
             </button>
             
             <div className="flex space-x-4">
-              <button className="p-4 border border-blood-600 rounded-lg hover:bg-blood-600/20 transition-all duration-300 group">
+              <a 
+                href="https://github.com/priyanshu-coder" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 border border-blood-600 rounded-lg hover:bg-blood-600/20 transition-all duration-300 group"
+              >
                 <Github className="w-6 h-6 text-blood-400 group-hover:text-white" />
-              </button>
-              <button className="p-4 border border-blood-600 rounded-lg hover:bg-blood-600/20 transition-all duration-300 group">
+              </a>
+              <a 
+                href="mailto:s.priyanshu.coder@gmail.com"
+                className="p-4 border border-blood-600 rounded-lg hover:bg-blood-600/20 transition-all duration-300 group"
+              >
                 <Mail className="w-6 h-6 text-blood-400 group-hover:text-white" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
