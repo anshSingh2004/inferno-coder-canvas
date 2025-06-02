@@ -28,11 +28,13 @@ const Index = () => {
     <div className="min-h-screen bg-cyber-black text-white relative">
       <MatrixBackground />
       <Navigation />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <div className="space-y-20">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
     </div>
   );
 };

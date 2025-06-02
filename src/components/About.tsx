@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Code, Zap, Shield, Users } from 'lucide-react';
 
@@ -103,13 +102,13 @@ export const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-cyber-dark/30">
+    <section id="about" className="py-32 bg-cyber-dark/30">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 neon-text">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-20 neon-text">
           About The <span className="text-blood-500">Developer</span>
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <div className="terminal-window">
               <div className="terminal-header">
