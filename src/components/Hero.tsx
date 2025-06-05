@@ -77,7 +77,13 @@ export const Hero = () => {
                       $ whoami
                     </div>
                     <div className="text-white text-4xl md:text-6xl font-bold mb-6">
-                      PRIYANSHU SINGH
+                      PRIYANSHU'S-PORTFOLIO
+                    </div>
+                    <div className="text-blood-400 font-mono text-sm mb-2">
+                      $ cat developer.txt
+                    </div>
+                    <div className="text-white text-3xl md:text-4xl font-bold mb-6">
+                      &lt;DEV-PRIYANSHU/&gt;
                     </div>
                     <div className="text-blood-400 font-mono text-sm mb-2">
                       $ cat role.txt

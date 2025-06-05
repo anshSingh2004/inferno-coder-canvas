@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Github } from 'lucide-react';
 
 export const LoadingScreen = () => {
   const [progress, setProgress] = useState(0);
@@ -34,12 +35,15 @@ export const LoadingScreen = () => {
   return (
     <div className="fixed inset-0 bg-cyber-black flex items-center justify-center z-50">
       <div className="text-center space-y-8">
-        <div className="relative">
+        <div className="relative flex items-center justify-center space-x-4">
+          <Github className="w-12 h-12 text-blood-500 animate-pulse" />
           <h1 className="text-6xl font-bold text-blood-500 animate-pulse neon-text">
-            INFERNO_CODER
+            DEV-PRIYANSHU15
           </h1>
-          <div className="absolute inset-0 text-6xl font-bold text-blood-300 animate-glitch opacity-50">
-            INFERNO_CODER
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-6xl font-bold text-blood-300 animate-glitch opacity-50">
+              DEV-PRIYANSHU15
+            </div>
           </div>
         </div>
         
