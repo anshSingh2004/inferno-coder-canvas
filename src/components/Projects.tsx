@@ -1,9 +1,19 @@
 
 import { useState } from 'react';
-import { Github, Link, Code, Database, Shield } from 'lucide-react';
+import { Github, Link, Code, Database, Shield, Zap, Brain, Cloud } from 'lucide-react';
 
 export const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>('all');
+
+  const categories = [
+    { id: 'all', name: 'All Projects', icon: Code },
+    { id: 'fullstack', name: 'Full Stack', icon: Database },
+    { id: 'devops', name: 'DevOps', icon: Cloud },
+    { id: 'ai', name: 'AI/ML', icon: Brain },
+    { id: 'python', name: 'Python', icon: Code },
+    { id: 'security', name: 'Security', icon: Shield }
+  ];
 
   const projects = [
     {
@@ -13,7 +23,7 @@ export const Projects = () => {
       features: ['Real-time data', 'Advanced charts', 'Portfolio tracking', 'Secure trading'],
       github: '#',
       live: '#',
-      category: 'fintech'
+      category: 'fullstack'
     },
     {
       title: 'SecureVault API',
@@ -41,15 +51,56 @@ export const Projects = () => {
       github: '#',
       live: '#',
       category: 'devops'
+    },
+    {
+      title: 'Data Analytics Engine',
+      description: 'Python-based data processing and analytics engine with real-time visualization.',
+      tech: ['Python', 'Pandas', 'NumPy', 'Plotly'],
+      features: ['Data processing', 'Real-time analytics', 'Interactive dashboards', 'Export reports'],
+      github: '#',
+      live: '#',
+      category: 'python'
+    },
+    {
+      title: 'E-Commerce Platform',
+      description: 'Full-stack e-commerce solution with payment integration and admin dashboard.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      features: ['Payment processing', 'Inventory management', 'Order tracking', 'Admin panel'],
+      github: '#',
+      live: '#',
+      category: 'fullstack'
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Scalable microservices platform with service mesh and monitoring.',
+      tech: ['Docker', 'Kubernetes', 'Istio', 'Prometheus'],
+      features: ['Service mesh', 'Load balancing', 'Health monitoring', 'Auto scaling'],
+      github: '#',
+      live: '#',
+      category: 'devops'
+    },
+    {
+      title: 'Computer Vision App',
+      description: 'AI-powered image recognition and processing application.',
+      tech: ['Python', 'OpenCV', 'TensorFlow', 'Flask'],
+      features: ['Image recognition', 'Real-time processing', 'Object detection', 'API integration'],
+      github: '#',
+      live: '#',
+      category: 'ai'
     }
   ];
 
+  const filteredProjects = activeCategory === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === activeCategory);
+
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'fintech': return Code;
+      case 'fullstack': return Database;
       case 'security': return Shield;
-      case 'ai': return Database;
-      case 'devops': return Database;
+      case 'ai': return Brain;
+      case 'devops': return Cloud;
+      case 'python': return Code;
       default: return Code;
     }
   };
@@ -61,8 +112,29 @@ export const Projects = () => {
           Project <span className="text-blood-500">Portfolio</span>
         </h2>
 
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => {
+            const CategoryIcon = category.icon;
+            return (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 border ${
+                  activeCategory === category.id
+                    ? 'bg-blood-600 text-white border-blood-500 neon-border'
+                    : 'bg-cyber-black text-gray-300 border-blood-600/30 hover:bg-blood-600/20 hover:text-blood-400'
+                }`}
+              >
+                <CategoryIcon className="w-4 h-4" />
+                <span className="font-mono text-sm">{category.name}</span>
+              </button>
+            );
+          })}
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => {
+          {filteredProjects.map((project, index) => {
             const CategoryIcon = getCategoryIcon(project.category);
             return (
               <div
