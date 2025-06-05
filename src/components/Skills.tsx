@@ -13,7 +13,9 @@ export const Skills = () => {
       skills: [
         { name: 'React/Next.js', level: 95 },
         { name: 'TypeScript', level: 90 },
+        { name: 'JavaScript', level: 92 },
         { name: 'TailwindCSS', level: 88 },
+        { name: 'Redux', level: 85 },
         { name: 'Three.js', level: 85 },
       ]
     },
@@ -22,9 +24,23 @@ export const Skills = () => {
       icon: Database,
       skills: [
         { name: 'Node.js', level: 93 },
+        { name: 'Express.js', level: 90 },
         { name: 'Python', level: 87 },
+        { name: 'Golang', level: 82 },
+        { name: 'Java', level: 85 },
+        { name: 'C++', level: 88 },
+        { name: 'GraphQL', level: 86 },
+        { name: 'RESTful API', level: 92 },
+      ]
+    },
+    {
+      title: 'Database',
+      icon: Database,
+      skills: [
         { name: 'PostgreSQL', level: 90 },
+        { name: 'MongoDB', level: 88 },
         { name: 'Redis', level: 82 },
+        { name: 'Cloudinary', level: 75 },
       ]
     },
     {
@@ -32,9 +48,13 @@ export const Skills = () => {
       icon: Shield,
       skills: [
         { name: 'Docker', level: 88 },
-        { name: 'AWS/GCP', level: 85 },
+        { name: 'AWS', level: 85 },
         { name: 'Kubernetes', level: 80 },
         { name: 'CI/CD', level: 92 },
+        { name: 'Jenkins', level: 85 },
+        { name: 'Terraform', level: 82 },
+        { name: 'GitOps', level: 80 },
+        { name: 'Prometheus', level: 78 },
       ]
     },
     {
@@ -43,6 +63,7 @@ export const Skills = () => {
       skills: [
         { name: 'Git/GitHub', level: 95 },
         { name: 'VS Code', level: 98 },
+        { name: 'Linux', level: 85 },
         { name: 'Figma', level: 75 },
         { name: 'Postman', level: 90 },
       ]
@@ -73,7 +94,7 @@ export const Skills = () => {
           Technical <span className="text-blood-500">Arsenal</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {skillCategories.map((category, categoryIndex) => {
             const Icon = category.icon;
             return (
