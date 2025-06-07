@@ -8,46 +8,32 @@ export const Experience = () => {
 
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Innovations Inc.',
+      title: 'Software Development Engineer Intern',
+      company: 'Bluestock Fintech',
       location: 'Remote',
-      duration: 'Jan 2023 - Present',
-      description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing DevOps best practices.',
+      duration: 'January 2025 - February 2025',
+      description: 'Engineered scalable and secure financial solutions, focusing on backend development and API integration for financial transactions and account management systems.',
       achievements: [
-        'Built microservices architecture serving 100K+ users',
-        'Reduced deployment time by 60% with CI/CD pipelines',
-        'Led team of 5 developers on multiple projects',
-        'Implemented monitoring solutions reducing downtime by 40%'
+        'Engineered scalable and secure financial solutions using modern tech stack',
+        'Built robust RESTful APIs for financial transactions and account management',
+        'Ensured data consistency and security in financial operations',
+        'Collaborated with frontend team to integrate backend services and enhance user experience'
       ],
-      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'Kubernetes']
+      technologies: ['Node.js', 'Express.js', 'PostgreSQL', 'RESTful API', 'Financial Systems']
     },
     {
       title: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      location: 'Bangalore, India',
-      duration: 'Jun 2021 - Dec 2022',
-      description: 'Developed and maintained multiple client applications using modern JavaScript frameworks and backend technologies.',
-      achievements: [
-        'Delivered 15+ projects with 98% client satisfaction',
-        'Optimized database queries improving performance by 45%',
-        'Integrated third-party APIs and payment gateways',
-        'Collaborated with cross-functional teams in Agile environment'
-      ],
-      technologies: ['React', 'Python', 'PostgreSQL', 'Redux', 'Express.js']
-    },
-    {
-      title: 'Software Developer Intern',
-      company: 'StartupTech',
+      company: 'Prodigy Infotech',
       location: 'Remote',
-      duration: 'Jan 2021 - May 2021',
-      description: 'Worked on frontend development and learned industry best practices in software development lifecycle.',
+      duration: 'December 2024 - January 2025',
+      description: 'Developed and maintained comprehensive full-stack web applications with focus on modern JavaScript frameworks and secure authentication systems.',
       achievements: [
-        'Contributed to main product development',
-        'Learned modern development workflows',
-        'Participated in code reviews and team meetings',
-        'Built responsive web components'
+        'Developed and maintained full-stack web applications using React.js, Node.js, and MongoDB',
+        'Implemented secure authentication and authorization systems using JWT and OAuth',
+        'Optimized API performance and database queries for improved scalability and efficiency',
+        'Delivered high-quality, maintainable code following industry best practices'
       ],
-      technologies: ['JavaScript', 'React', 'CSS', 'Git']
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'JWT', 'OAuth', 'Full Stack Development']
     }
   ];
 
