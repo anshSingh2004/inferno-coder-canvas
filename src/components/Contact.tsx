@@ -11,8 +11,21 @@ export const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Contact from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:s.priyanshu.coder@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    setFormData({ name: '', email: '', message: '' });
+    
+    console.log('Email client opened with form data');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -61,7 +74,7 @@ export const Contact = () => {
                   </a>
 
                   <a 
-                    href="https://github.com/priyanshu-coder" 
+                    href="https://github.com/dev-priyanshu15" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-4 p-4 bg-cyber-black rounded-lg hover:bg-blood-600/10 transition-all duration-300 group"
@@ -69,12 +82,12 @@ export const Contact = () => {
                     <Github className="w-6 h-6 text-blood-400 group-hover:animate-pulse" />
                     <div>
                       <div className="text-sm text-gray-400 font-mono">GitHub Repository</div>
-                      <div className="text-white">github.com/priyanshu-coder</div>
+                      <div className="text-white">github.com/dev-priyanshu15</div>
                     </div>
                   </a>
 
                   <a 
-                    href="https://linkedin.com/in/priyanshu-singh" 
+                    href="https://www.linkedin.com/in/priyanshu-singh-b20073257/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-4 p-4 bg-cyber-black rounded-lg hover:bg-blood-600/10 transition-all duration-300 group"
@@ -82,7 +95,7 @@ export const Contact = () => {
                     <Linkedin className="w-6 h-6 text-blood-400 group-hover:animate-pulse" />
                     <div>
                       <div className="text-sm text-gray-400 font-mono">LinkedIn Profile</div>
-                      <div className="text-white">linkedin.com/in/priyanshu-singh</div>
+                      <div className="text-white">linkedin.com/in/priyanshu-singh-b20073257</div>
                     </div>
                   </a>
 

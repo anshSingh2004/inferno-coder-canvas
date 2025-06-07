@@ -1,12 +1,12 @@
-
 import { useState } from 'react';
-import { Github, Link, Code, Database, Shield, Zap, Brain, Cloud } from 'lucide-react';
+import { Github, Link, Code, Database, Shield, Zap, Brain, Cloud, Star } from 'lucide-react';
 
 export const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [activeCategory, setActiveCategory] = useState<string>('featured');
 
   const categories = [
+    { id: 'featured', name: 'Featured', icon: Star },
     { id: 'all', name: 'All Projects', icon: Code },
     { id: 'fullstack', name: 'Full Stack', icon: Database },
     { id: 'devops', name: 'DevOps', icon: Cloud },
@@ -23,7 +23,8 @@ export const Projects = () => {
       features: ['Real-time data', 'Advanced charts', 'Portfolio tracking', 'Secure trading'],
       github: '#',
       live: '#',
-      category: 'fullstack'
+      category: 'fullstack',
+      featured: true
     },
     {
       title: 'SecureVault API',
@@ -32,7 +33,8 @@ export const Projects = () => {
       features: ['JWT Auth', 'Rate limiting', 'API monitoring', 'Auto scaling'],
       github: '#',
       live: '#',
-      category: 'security'
+      category: 'security',
+      featured: true
     },
     {
       title: 'NeuralNet Dashboard',
@@ -41,7 +43,8 @@ export const Projects = () => {
       features: ['Model deployment', 'Real-time monitoring', 'Performance analytics', 'A/B testing'],
       github: '#',
       live: '#',
-      category: 'ai'
+      category: 'ai',
+      featured: true
     },
     {
       title: 'DevOps Pipeline',
@@ -50,7 +53,8 @@ export const Projects = () => {
       features: ['Auto deployment', 'Container orchestration', 'Infrastructure scaling', 'Monitoring'],
       github: '#',
       live: '#',
-      category: 'devops'
+      category: 'devops',
+      featured: true
     },
     {
       title: 'Data Analytics Engine',
@@ -92,6 +96,8 @@ export const Projects = () => {
 
   const filteredProjects = activeCategory === 'all' 
     ? projects 
+    : activeCategory === 'featured'
+    ? projects.filter(project => project.featured)
     : projects.filter(project => project.category === activeCategory);
 
   const getCategoryIcon = (category: string) => {
@@ -156,6 +162,7 @@ export const Projects = () => {
                   <div className="flex items-center space-x-2 ml-4">
                     <CategoryIcon className="w-4 h-4 text-blood-400" />
                     <span className="text-xs text-gray-400">{project.category}.exe</span>
+                    {project.featured && <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />}
                   </div>
                 </div>
 

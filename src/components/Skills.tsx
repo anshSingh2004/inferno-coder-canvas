@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Code, Database, Shield, Zap } from 'lucide-react';
 
@@ -29,6 +28,7 @@ export const Skills = () => {
         { name: 'Golang', level: 82 },
         { name: 'Java', level: 85 },
         { name: 'C++', level: 88 },
+        { name: 'Rust', level: 80 },
         { name: 'GraphQL', level: 86 },
         { name: 'RESTful API', level: 92 },
       ]
