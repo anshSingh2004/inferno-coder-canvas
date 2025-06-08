@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Code, Download, Github, Mail } from 'lucide-react';
 
@@ -14,6 +13,10 @@ export const Hero = () => {
     'Database Architect',
     'API Designer'
   ];
+
+  const handleResumeDownload = () => {
+    window.open('https://drive.google.com/file/d/10Z0_Rp4SnzPDViFbSACL6QJfi0unFLHE/view?usp=sharing', '_blank');
+  };
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 50 : 100;
@@ -106,7 +109,10 @@ export const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group px-8 py-4 bg-blood-600 hover:bg-blood-700 text-white rounded-lg transition-all duration-300 flex items-center space-x-2 neon-border hover:animate-pulse-red">
+              <button 
+                onClick={handleResumeDownload}
+                className="group px-8 py-4 bg-blood-600 hover:bg-blood-700 text-white rounded-lg transition-all duration-300 flex items-center space-x-2 neon-border hover:animate-pulse-red"
+              >
                 <Download className="w-5 h-5" />
                 <span className="font-mono">Download Resume</span>
               </button>

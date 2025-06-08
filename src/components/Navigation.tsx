@@ -1,13 +1,11 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, Terminal, User, Code, Briefcase, Award, FolderOpen, Mail } from 'lucide-react';
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('about');
 
   const navItems = [
-    { id: 'home', label: 'Home', icon: Terminal },
     { id: 'about', label: 'About', icon: User },
     { id: 'skills', label: 'Skills', icon: Code },
     { id: 'experience', label: 'Experience', icon: Briefcase },
