@@ -1,7 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { Briefcase, Calendar, MapPin, ChevronRight, Award, Eye, ExternalLink } from 'lucide-react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Briefcase, Calendar, MapPin, ChevronRight } from 'lucide-react';
 
 export const Experience = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,39 +8,6 @@ export const Experience = () => {
 
   const experienceItems = [
     {
-      type: 'certificate',
-      title: 'Advanced Software Engineering Job Simulation',
-      company: 'Walmart Global Tech',
-      location: 'Virtual Program on Forage',
-      duration: 'November 2024',
-      description: 'Completed advanced software engineering simulation solving complex technical challenges for various teams at Walmart, demonstrating expertise in data structures, system design, and database architecture.',
-      achievements: [
-        'Solved challenging technical projects for multiple Walmart teams through advanced problem-solving techniques',
-        'Developed a novel heap data structure implementation in Java for Walmart\'s shipping department optimization',
-        'Designed comprehensive UML class diagrams for data processors with multiple operating modes and database connections',
-        'Created detailed entity relationship diagrams for new database systems meeting Walmart\'s pet department requirements'
-      ],
-      technologies: ['Java', 'Data Structures', 'UML Design', 'Database Design', 'System Architecture'],
-      certificateImage: '/lovable-uploads/798d11c0-26b9-4eed-87bf-ffc5c3c4d43e.png'
-    },
-    {
-      type: 'certificate',
-      title: 'Software Development Engineer',
-      company: 'Bluestock Fintech',
-      location: 'Remote',
-      duration: 'February 2025',
-      description: 'Completed intensive internship program in financial technology, focusing on backend development and secure financial solutions.',
-      achievements: [
-        'Engineered scalable and secure financial solutions using modern tech stack',
-        'Built robust RESTful APIs for financial transactions and account management',
-        'Ensured data consistency and security in financial operations',
-        'Collaborated with frontend team to integrate backend services and enhance user experience'
-      ],
-      technologies: ['Node.js', 'Express.js', 'PostgreSQL', 'RESTful API', 'Financial Systems'],
-      certificateImage: '/lovable-uploads/14795388-0ad5-4149-bedd-8edc821d71ec.png'
-    },
-    {
-      type: 'experience',
       title: 'Software Development Engineer Intern',
       company: 'Bluestock Fintech',
       location: 'Remote',
@@ -56,23 +22,6 @@ export const Experience = () => {
       technologies: ['Node.js', 'Express.js', 'PostgreSQL', 'RESTful API', 'Financial Systems']
     },
     {
-      type: 'certificate',
-      title: 'Full-Stack Web Development',
-      company: 'Prodigy Infotech',
-      location: 'Remote',
-      duration: 'January 2025',
-      description: 'Successfully completed internship program with outstanding performance in full-stack web development using React.js, Node.js, and MongoDB.',
-      achievements: [
-        'Developed and maintained full-stack web applications using React.js, Node.js, and MongoDB',
-        'Implemented secure authentication and authorization systems using JWT and OAuth',
-        'Optimized API performance and database queries for improved scalability and efficiency',
-        'Delivered high-quality, maintainable code following industry best practices'
-      ],
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'JWT', 'OAuth', 'Full Stack Development'],
-      certificateImage: '/lovable-uploads/51b5cf25-2c4b-4d92-98ea-07b71bb97d05.png'
-    },
-    {
-      type: 'experience',
       title: 'Full Stack Developer',
       company: 'Prodigy Infotech',
       location: 'Remote',
@@ -126,9 +75,7 @@ export const Experience = () => {
                 style={{ transitionDelay: `${index * 0.2}s` }}
               >
                 {/* Timeline dot */}
-                <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-cyber-dark z-10 ${
-                  item.type === 'certificate' ? 'bg-yellow-500' : 'bg-blood-500'
-                }`}></div>
+                <div className="absolute left-6 w-4 h-4 bg-blood-500 rounded-full border-4 border-cyber-dark z-10"></div>
 
                 {/* Content */}
                 <div className="ml-20">
@@ -138,27 +85,14 @@ export const Experience = () => {
                       <div className="terminal-dot bg-yellow-500"></div>
                       <div className="terminal-dot bg-green-500"></div>
                       <div className="flex items-center space-x-2 ml-4">
-                        {item.type === 'certificate' ? (
-                          <Award className="w-4 h-4 text-yellow-400" />
-                        ) : (
-                          <Briefcase className="w-4 h-4 text-blood-400" />
-                        )}
-                        <span className="text-xs text-gray-400">
-                          {item.type}_{index + 1}.{item.type === 'certificate' ? 'cert' : 'log'}
-                        </span>
+                        <Briefcase className="w-4 h-4 text-blood-400" />
+                        <span className="text-xs text-gray-400">experience_{index + 1}.log</span>
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <div>
-                        <div className="flex items-center space-x-2 mb-2">
-                          <h3 className="text-2xl font-bold text-white">{item.title}</h3>
-                          {item.type === 'certificate' && (
-                            <span className="px-2 py-1 bg-yellow-600 text-yellow-100 rounded text-xs font-mono">
-                              CERTIFICATE
-                            </span>
-                          )}
-                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
                         <div className="flex flex-wrap items-center gap-4 text-blood-300 mb-2">
                           <div className="flex items-center space-x-2">
                             <ChevronRight className="w-4 h-4" />
@@ -177,9 +111,7 @@ export const Experience = () => {
                       </div>
 
                       <div>
-                        <h4 className="text-sm font-mono text-blood-400 mb-3">
-                          {item.type === 'certificate' ? 'Program Highlights:' : 'Key Achievements:'}
-                        </h4>
+                        <h4 className="text-sm font-mono text-blood-400 mb-3">Key Achievements:</h4>
                         <ul className="space-y-2">
                           {item.achievements.map((achievement, achIndex) => (
                             <li key={achIndex} className="flex items-start space-x-3">
@@ -203,32 +135,6 @@ export const Experience = () => {
                           ))}
                         </div>
                       </div>
-
-                      {item.type === 'certificate' && item.certificateImage && (
-                        <div className="flex justify-center">
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <button className="flex items-center space-x-2 px-6 py-3 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg transition-all duration-300 group-hover:scale-105">
-                                <Eye className="w-4 h-4" />
-                                <span>View Certificate</span>
-                                <ExternalLink className="w-4 h-4" />
-                              </button>
-                            </DialogTrigger>
-                            <DialogContent className="max-w-4xl bg-cyber-dark border border-blood-600/30">
-                              <div className="p-4">
-                                <h3 className="text-xl font-bold text-white mb-4">{item.title} - {item.company}</h3>
-                                <div className="bg-white rounded-lg p-2">
-                                  <img
-                                    src={item.certificateImage}
-                                    alt={`${item.title} Certificate`}
-                                    className="w-full h-auto rounded"
-                                  />
-                                </div>
-                              </div>
-                            </DialogContent>
-                          </Dialog>
-                        </div>
-                      )}
                     </div>
                   </div>
                 </div>

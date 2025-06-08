@@ -49,7 +49,7 @@ export const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Terminal className="w-8 h-8 text-blood-500" />
-            <span className="text-xl font-bold text-white font-mono">DevMatrix</span>
+            <span className="text-xl font-bold text-white font-mono">DevPriyanshu15</span>
           </div>
 
           {/* Desktop Navigation */}

@@ -9,13 +9,19 @@ export const Certificates = () => {
 
   const certificates = [
     {
-      title: 'Full-Stack Web Development',
-      issuer: 'Prodigy Infotech',
-      date: 'January 2025',
-      duration: '1 Month Internship',
-      description: 'Successfully completed internship program with outstanding performance in full-stack web development using React.js, Node.js, and MongoDB.',
-      image: '/lovable-uploads/51b5cf25-2c4b-4d92-98ea-07b71bb97d05.png',
-      skills: ['React.js', 'Node.js', 'MongoDB', 'Full Stack Development']
+      title: 'Advanced Software Engineering Job Simulation',
+      issuer: 'Walmart Global Tech',
+      date: 'November 2024',
+      duration: 'Virtual Program on Forage',
+      description: 'Completed advanced software engineering simulation solving complex technical challenges for various teams at Walmart, demonstrating expertise in data structures, system design, and database architecture.',
+      achievements: [
+        'Solved challenging technical projects for multiple Walmart teams through advanced problem-solving techniques',
+        'Developed a novel heap data structure implementation in Java for Walmart\'s shipping department optimization',
+        'Designed comprehensive UML class diagrams for data processors with multiple operating modes and database connections',
+        'Created detailed entity relationship diagrams for new database systems meeting Walmart\'s pet department requirements'
+      ],
+      skills: ['Java', 'Data Structures', 'UML Design', 'Database Design', 'System Architecture'],
+      image: '/lovable-uploads/798d11c0-26b9-4eed-87bf-ffc5c3c4d43e.png'
     },
     {
       title: 'Software Development Engineer',
@@ -23,8 +29,29 @@ export const Certificates = () => {
       date: 'February 2025',
       duration: 'SDE Internship',
       description: 'Completed intensive internship program in financial technology, focusing on backend development and secure financial solutions.',
-      image: '/lovable-uploads/14795388-0ad5-4149-bedd-8edc821d71ec.png',
-      skills: ['Node.js', 'Express.js', 'PostgreSQL', 'Financial Systems']
+      achievements: [
+        'Engineered scalable and secure financial solutions using modern tech stack',
+        'Built robust RESTful APIs for financial transactions and account management',
+        'Ensured data consistency and security in financial operations',
+        'Collaborated with frontend team to integrate backend services and enhance user experience'
+      ],
+      skills: ['Node.js', 'Express.js', 'PostgreSQL', 'Financial Systems'],
+      image: '/lovable-uploads/14795388-0ad5-4149-bedd-8edc821d71ec.png'
+    },
+    {
+      title: 'Full-Stack Web Development',
+      issuer: 'Prodigy Infotech',
+      date: 'January 2025',
+      duration: '1 Month Internship',
+      description: 'Successfully completed internship program with outstanding performance in full-stack web development using React.js, Node.js, and MongoDB.',
+      achievements: [
+        'Developed and maintained full-stack web applications using React.js, Node.js, and MongoDB',
+        'Implemented secure authentication and authorization systems using JWT and OAuth',
+        'Optimized API performance and database queries for improved scalability and efficiency',
+        'Delivered high-quality, maintainable code following industry best practices'
+      ],
+      skills: ['React.js', 'Node.js', 'MongoDB', 'Full Stack Development'],
+      image: '/lovable-uploads/51b5cf25-2c4b-4d92-98ea-07b71bb97d05.png'
     }
   ];
 
@@ -52,7 +79,7 @@ export const Certificates = () => {
           Professional <span className="text-blood-500">Certifications</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {certificates.map((cert, index) => (
             <div
               key={index}
@@ -73,21 +100,33 @@ export const Certificates = () => {
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{cert.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">{cert.title}</h3>
                   <div className="text-blood-300 mb-2">
                     <p className="font-mono text-lg">{cert.issuer}</p>
                     <p className="text-sm text-gray-400">{cert.duration} • {cert.date}</p>
                   </div>
-                  <p className="text-gray-300 leading-relaxed mb-4">{cert.description}</p>
+                  <p className="text-gray-300 leading-relaxed mb-4 text-sm">{cert.description}</p>
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-mono text-blood-400 mb-3">Technologies Covered:</h4>
+                  <h4 className="text-sm font-mono text-blood-400 mb-3">Program Highlights:</h4>
+                  <ul className="space-y-1 mb-4">
+                    {cert.achievements.slice(0, 2).map((achievement, achIndex) => (
+                      <li key={achIndex} className="flex items-start space-x-2">
+                        <span className="w-1.5 h-1.5 bg-blood-500 rounded-full mt-2 flex-shrink-0"></span>
+                        <span className="text-gray-300 text-xs">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-mono text-blood-400 mb-3">Technologies:</h4>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {cert.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 bg-cyber-black text-blood-300 rounded-lg text-sm font-mono border border-blood-600/30"
+                        className="px-2 py-1 bg-cyber-black text-blood-300 rounded text-xs font-mono border border-blood-600/30"
                       >
                         {skill}
                       </span>
@@ -98,9 +137,9 @@ export const Certificates = () => {
                 <div className="flex justify-center">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <button className="flex items-center space-x-2 px-6 py-3 bg-blood-600 hover:bg-blood-700 text-white rounded-lg transition-all duration-300 group-hover:scale-105">
+                      <button className="flex items-center space-x-2 px-4 py-2 bg-blood-600 hover:bg-blood-700 text-white rounded-lg transition-all duration-300 group-hover:scale-105">
                         <Eye className="w-4 h-4" />
-                        <span>View Certificate</span>
+                        <span className="text-sm">View Certificate</span>
                         <ExternalLink className="w-4 h-4" />
                       </button>
                     </DialogTrigger>
