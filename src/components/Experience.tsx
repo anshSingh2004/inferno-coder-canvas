@@ -10,6 +10,22 @@ export const Experience = () => {
   const experienceItems = [
     {
       type: 'certificate',
+      title: 'Advanced Software Engineering Job Simulation',
+      company: 'Walmart Global Tech',
+      location: 'Virtual Program on Forage',
+      duration: 'November 2024',
+      description: 'Completed advanced software engineering simulation solving complex technical challenges for various teams at Walmart, demonstrating expertise in data structures, system design, and database architecture.',
+      achievements: [
+        'Solved challenging technical projects for multiple Walmart teams through advanced problem-solving techniques',
+        'Developed a novel heap data structure implementation in Java for Walmart\'s shipping department optimization',
+        'Designed comprehensive UML class diagrams for data processors with multiple operating modes and database connections',
+        'Created detailed entity relationship diagrams for new database systems meeting Walmart\'s pet department requirements'
+      ],
+      technologies: ['Java', 'Data Structures', 'UML Design', 'Database Design', 'System Architecture'],
+      certificateImage: '/lovable-uploads/798d11c0-26b9-4eed-87bf-ffc5c3c4d43e.png'
+    },
+    {
+      type: 'certificate',
       title: 'Software Development Engineer',
       company: 'Bluestock Fintech',
       location: 'Remote',
@@ -93,7 +109,7 @@ export const Experience = () => {
     <section id="experience" ref={sectionRef} className="py-20 bg-cyber-dark/20">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 neon-text">
-          Professional <span className="text-blood-500">Journey</span>
+          Professional <span className="text-blood-500">Experience</span>
         </h2>
 
         <div className="max-w-4xl mx-auto">

@@ -1,10 +1,10 @@
-
 import { useState, useEffect } from 'react';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
 import { Skills } from '@/components/Skills';
 import { Experience } from '@/components/Experience';
 import { Projects } from '@/components/Projects';
+import { Certificates } from '@/components/Certificates';
 import { Contact } from '@/components/Contact';
 import { Navigation } from '@/components/Navigation';
 import { MatrixBackground } from '@/components/MatrixBackground';
@@ -35,6 +35,7 @@ const Index = () => {
         <Skills />
         <Experience />
         <Projects />
+        <Certificates />
         <Contact />
       </div>
     </div>
