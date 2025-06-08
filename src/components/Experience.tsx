@@ -34,6 +34,20 @@ export const Experience = () => {
         'Delivered high-quality, maintainable code following industry best practices'
       ],
       technologies: ['React.js', 'Node.js', 'MongoDB', 'JWT', 'OAuth', 'Full Stack Development']
+    },
+    {
+      title: 'Advanced Software Engineering Job Simulation',
+      company: 'Walmart USA',
+      location: 'Virtual Experience Program on Forage',
+      duration: 'November 2024',
+      description: 'Completed the Advanced Software Engineering Job Simulation where I solved difficult technical projects for a variety of teams at Walmart.',
+      achievements: [
+        'Completed the Advanced Software Engineering Job Simulation solving difficult technical projects for various teams at Walmart',
+        'Developed a novel version of a heap data structure in Java for Walmart\'s shipping department, showcasing strong problem-solving and algorithmic skills',
+        'Designed a UML class diagram for a data processor, considering different operating modes and database connections',
+        'Created an entity relationship diagram to design a new database accounting for all requirements provided by Walmart\'s pet department'
+      ],
+      technologies: ['Java', 'Data Structures', 'UML Design', 'Database Design', 'System Architecture']
     }
   ];
 
